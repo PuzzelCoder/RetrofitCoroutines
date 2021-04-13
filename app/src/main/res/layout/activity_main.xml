@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+  <EditText
+      android:id="@+id/searchEditText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_margin="10dp"
+      android:padding="10dp"
+      android:textSize="16sp"
+      android:textColor="@color/black"
+      android:hint="Search User"
+      android:background="@drawable/mybackground"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/searchuser"
+        android:text="Search Button"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/searchEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchuser"
+        android:layout_marginStart="10dp"
+        android:paddingBottom="120dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/createUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        android:text="Create User"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
